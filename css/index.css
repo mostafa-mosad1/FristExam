@@ -1,0 +1,288 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --text-color: #748182;
+  --section-bg: #f7f7f7;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.508), rgba(0, 0, 0, 0.502)),
+    url(../assets/bg.jpg);
+  /* background-position: center center; */
+  background-size: cover;
+}
+
+header .active {
+  border-bottom: 2px solid white;
+  --bs-navbar-active-color: red;
+}
+.text {
+  color: var(--text-color);
+}
+.about .img {
+  position: relative;
+}
+.about .img::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/dots.png);
+  background-repeat: repeat;
+  position: absolute;
+  top: 15%;
+  left: 0;
+  z-index: -1;
+}
+.about .web-des1,
+.web-des2,
+.web-des3 {
+  border: 1px solid gray;
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+  height: 1.5rem;
+}
+.about .web-des1::before {
+  content: "";
+  width: 95%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.about .web-des2::before {
+  content: "";
+  width: 75%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.about .web-des3::before {
+  content: "";
+  width: 85%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.about .btn-1 {
+  background-color: black;
+  color: white;
+  transition: all 0.3s;
+}
+.about .btn-1:hover {
+  background-color: white;
+  color: black;
+}
+.about .btn-2 {
+  background-color: white;
+  color: black;
+  transition: all 0.3s;
+}
+.about .btn-2:hover {
+  background-color: black;
+  color: white;
+}
+
+/* service */
+.service,
+.Testimonials,
+.Our_Team {
+  background-color: var(--section-bg);
+}
+.service .des {
+  width: 100%;
+  background-color: white !important;
+  box-shadow: 0px 0px 4px rgb(197, 192, 192);
+}
+.service .des i {
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.125);
+  transition: all 0.5s;
+}
+.service .des:hover i {
+  color: white;
+  background-color: rgb(0, 0, 0);
+}
+/* profolio */
+.Portfolio .nav {
+  --bs-nav-link-hover-color: black;
+}
+.Portfolio .nav .nav-item .nav-link {
+  --bs-nav-link-color: black;
+  font-weight: bold;
+  border: none;
+}
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  font-weight: bold;
+  position: relative;
+}
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active::after {
+  content: " ";
+  width: 50%;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.Portfolio .des {
+  position: relative;
+}
+.Portfolio .des img {
+  width: 100%;
+}
+.Portfolio .des .hov {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  border: 0.8rem solid rgba(128, 128, 128, 0.165);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.Portfolio .des .hov i {
+  border-radius: 50%;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  transition: all 0.4s;
+}
+.Portfolio .des .hov i:hover {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+}
+.Portfolio .des:hover .hov {
+  opacity: 1;
+}
+/* team */
+.Our_Team .des {
+  position: relative;
+}
+.Our_Team .img {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+.Our_Team .img img {
+  width: 100%;
+  transition: all 0.8s;
+}
+.Our_Team .img:hover img {
+  scale: 1.1;
+}
+.Our_Team .img:hover .icons {
+  opacity: 1;
+  transform: rotatey(360deg);
+}
+.Our_Team .icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  margin: 0.5rem;
+  transition: all 0.8s;
+}
+.Our_Team .icons a i {
+  background-color: black;
+  color: white;
+  transition: all 0.3s;
+}
+.Our_Team .icons a i:hover {
+  background-color: white !important;
+  color: black;
+  border: 1px solid black;
+}
+.Our_Team .des .title {
+  padding: 1.5rem;
+  color: white;
+  background-color: #5b5b5b;
+}
+
+/* contact */
+.contact .des  i {
+  background-color: rgba(0, 0, 0, 0.125);
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+.contact .des:hover i {
+  color: white;
+  background-color: rgb(0, 0, 0);
+  --bs-focus-ring-color:red
+}
+input,textarea{
+  background-color: var(--section-bg);
+  border: none;
+}
+input:focus{
+  outline: 0 !important;
+  border-color: transparent !important;
+  box-shadow: none;
+  background-color: #f4f4f4;
+
+}
+textarea:focus{
+  outline: 0 !important;
+  border-color: transparent !important;
+  box-shadow: none;
+  background-color: #f4f4f4;
+
+}
+.contact button {
+  background-color: black;
+  color: white;
+  transition: all 0.3s;
+}
+.contact button:hover {
+  background-color: white;
+  color: black;
+}
